@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""Create a Class Square with size, method of area and getters & setters"""
+"""
+Create a Class Square with:
+- size proprety
+- method of area and method of print_square
+- getters & setters.
+"""
 
 
 class Square:
@@ -17,6 +22,14 @@ class Square:
     def area(self):
         """Method to get the area of the Square"""
         return (self.__size ** 2)
+
+    def my_print(self):
+        """Method to print a Square"""
+        if (self.__size == 0):
+            print()
+        else:
+            for rows in range(self.__size):
+                print("#" * self.__size)
 
     @property
     def size(self):
