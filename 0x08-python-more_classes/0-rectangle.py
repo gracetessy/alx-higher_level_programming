@@ -4,4 +4,4 @@
 
 class Rectangle():
     """Do nothing"""
-        pass
+    pass
