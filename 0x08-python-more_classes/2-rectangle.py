@@ -1,17 +1,16 @@
 #!/usr/bin/python3
-
 """This program define a class Rectangle with it attributes"""
 
 
 class Rectangle():
     """
     A Rectangle Class with the private instance attributes width and height
-    """
+        """
 
     def __init__(self, width=0, height=0):
         """
-        Constructor of the class Rectangle
-          Args:
+       Constructor of the class Rectangle
+         Args:
             - width (default = 0): int
             - heigth (default = 0): int
         """
@@ -27,8 +26,8 @@ class Rectangle():
     def width(self, value):
         """
         Getter of the property value
-          Args:
-            - value: int
+         Args:
+           - value: int
         """
         if not isinstance(value, int):
             raise TypeError('width must be an integer')
@@ -48,7 +47,7 @@ class Rectangle():
         """
         Getter of the property value
           Args:
-            - value: int
+           - value: int
         """
         if not isinstance(value, int):
             raise TypeError('height must be an integer')
