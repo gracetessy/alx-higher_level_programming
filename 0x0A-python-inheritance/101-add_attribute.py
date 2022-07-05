@@ -3,7 +3,7 @@
 
 
 def add_attribute(obj, name, value):
-        """Method for checking and adding new attribute"""
+    """Method for checking and adding new attribute"""
 
     if hasattr(obj, "__dict__") or \
        (hasattr(obj, "__slots__") and name in obj.__slots__):
