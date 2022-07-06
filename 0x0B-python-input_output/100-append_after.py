@@ -1,19 +1,29 @@
 #!/usr/bin/python3
 """
-Module for pascal_triangle method.
+This program take a file and read it, search a string
+and add other string on the next line
 """
 
 
-def pascal_triangle(n):
+def append_after(filename="", search_string="", new_string=""):
     """
-    returns a list of lists of integers
-        Args:
-            n (int): number of lists and digits
-        Returns: list of lists
+    Open and reads a file, search a string in all the file.
+    and after each ocurrence add other string (new_string)
+    Args:
+    - filename: string
+    - search_string: string
+    - new_string: string
     """
-    rows = [[1 for j in range(i + 1)] for i in range(n)]
-    for n in range(n):
-        for i in range(n - 1):
-            rows[n][i + 1] = sum(rows[n - 1][i:i + 2])
-    return rows
-    
+
+    with open(filename, mode="r+", encoding="utf-8") as _file:
+        all_text = _file.readlines()
+        new_text = ""
+
+        for line in all_text:
+            new_text += line
+            if (search_string in line):
+                new_text += new_string
+
+        # This method position the cursor to the beginning of the file
+        _file.seek(0)
+        _file.write(new_text)
