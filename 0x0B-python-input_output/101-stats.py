@@ -23,7 +23,6 @@ if __name__ == "__main__":
             pass
 
     def print_stats():
-
         '''Prints accumulated statistics.'''
         print("File size: {}".format(size[0]))
         for k in sorted(codes.keys()):
