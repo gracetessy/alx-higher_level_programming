@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Module that creates an Object from a JSON file
 """
-import 
+import json
 
 
 def load_from_json_file(filename):
